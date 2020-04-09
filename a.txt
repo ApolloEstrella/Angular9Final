@@ -1,0 +1,98 @@
+ng new angular-router-sample
+ng add @ngrx/store
+ng generate component crisis-list
+ng generate component hero-list
+ng generate component page-not-found
+
+<a class="nav-link" routerLink="/crisis-center" routerLinkActive="active">Crisis Center</a>
+
+      <a class="nav-link" routerLink="/heroes" routerLinkActive="active">Heroes</a>
+
+<!-- <h1>Angular Router</h1>
+<nav>
+  <a routerLink="/crisis-center" routerLinkActive="active">Crisis Center</a>
+  <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+</nav>
+<router-outlet></router-outlet> -->
+
+<!--<script>
+
+$( document ).ready(function() {
+  alert('ab')
+
+  $("a[target=='_blank']").on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+});
+});
+
+
+<div class="panel panel-primary">
+    <div class="panel-body">
+      <form>
+        <div class="form-group">
+          <label class="col-md-4">Coin Name</label>
+          <input type="text" class="form-control" name="coin_name"/>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4">Coin Price</label>
+          <input type="text" class="form-control" name="coin_price"/>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Add</button>
+          </div>
+      </form>
+    </div>
+  </div>
+
+
+
+ng add @ngrx/store --minimal false
+
+
+
+
+
+
+</!--<script>
+
+
+
+
+
+<!-- <h1>Angular Router</h1>
+<nav>
+  <a routerLink="/crisis-center" routerLinkActive="active">Crisis Center</a>
+  <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+</nav>
+
+export const blogContent: ActionReducer<BlogContent> = (state: BlogContent= initialState, action: Action ) => {
+    switch (action.type) {
+      case  ADD_OPERATION :
+        return Object.assign({}, state, action.payload );
+      case  ADD_BLOG_CONTENT_OPERATION :
+        return Object.assign({}, state, { actualContent: [...state.actualContent, action.payload]});
+        case  ADD_BLOG_TAG_OPERATION :
+        return Object.assign({}, state, { tags: [...state.tags, action.payload]});
+      case REMOVE_OPERATION :
+        return Object.assign({}, state, { actualContent: state.actualContent.filter((blog) => blog.id !== action.payload.id) });
+      case ADD_IMAGE_ID : {
+        let index = _.findIndex(state.actualContent, {id: action.payload.id});
+        console.log(index);
+        if ( index >= 0 ) {
+          return  Object.assign({}, state, {
+            actualContent :  [
+              ...state.actualContent.slice(0, index),
+              action.payload,
+              ...state.actualContent.slice(index + 1)
+            ]
+          });
+        }
+        return state;
+      }
+      default :
+        return state;
+    }
+};
+
+<router-outlet></router-outlet> -->
